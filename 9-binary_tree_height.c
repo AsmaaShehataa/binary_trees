@@ -3,39 +3,39 @@
 /**
  * binary_tree_height - measures the height of a binary tree
  * @tree: pointer to the root node of the tree
- * Return: the size or 0 if tree is null
+ * Return: if tree is null returns 0
  */
 
 size_t binary_tree_height(const binary_tree_t *tree)
 {
-	int counter;
+	int bin_trrcounter;
 
 	if (tree == NULL)
 		return (0);
 
-	counter = tree_height(tree);
+	bin_trrcounter = tree_height(tree);
 
-	return ((size_t)counter);
+	return ((size_t)bin_trrcounter);
 }
 
 /**
  * tree_height - count node tree height
- * @node: node to measure
- * Return: height
+ * @tree: tree to measure
+ * Return: tree height
  */
 
-int tree_height(const binary_tree_t *node)
+int tree_height(const binary_tree_t *tree)
 {
-	int lDepth, rDepth;
+	int left_h, right_h;
 
-	if (node == NULL)
+	if (tree == NULL)
 		return (-1);
 
-	lDepth = tree_height(node->left);
-	rDepth = tree_height(node->right);
+	left_h = tree_height(tree->left);
+	right_h = tree_height(tree->right);
 
-	if (lDepth > rDepth)
-		return (lDepth + 1);
+	if (left_h > right_h)
+		return (left_h + 1);
 	else
-		return (rDepth + 1);
+		return (right_h + 1);
 }
