@@ -13,10 +13,9 @@ int counter_b_tree;
 if (tree == NULL)
 return (0);
 
-counter_b_tree = tree_height(tree);
+counter_b_tree = Atree_height(tree);
 return ((size_t)counter_b_tree);
 }
-
 
 /**
  * Atree_height - measure and count the tree height
@@ -30,8 +29,8 @@ int lHight_b_tree = 0, rHight_b_tree = 0;
 if (tree == NULL)
 return (-1);
 
-lHight_b_tree = tree_height(tree->left);
-rHight_b_tree = tree_height(tree->right);
+lHight_b_tree = Atree_height(tree->left);
+rHight_b_tree = Atree_height(tree->right);
 
 if (lHight_b_tree > rHight_b_tree)
 return (lHight_b_tree + 1);
