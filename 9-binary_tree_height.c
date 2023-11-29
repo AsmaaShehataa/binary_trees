@@ -17,6 +17,7 @@ counter_b_tree = tree_height(tree);
 return ((size_t)counter_b_tree);
 }
 
+
 /**
  * Atree_height - measure and count the tree height
  * @tree: tree to measure
