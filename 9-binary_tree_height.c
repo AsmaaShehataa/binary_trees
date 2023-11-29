@@ -18,11 +18,11 @@ return ((size_t)counter_b_tree);
 }
 
 /**
- * binary_height_selfrec - measure and count the tree height
+ * Atree_height - measure and count the tree height
  * @tree: tree to measure
  * Return: tree height
 */
-size_t binary_height_selfrec(const binary_tree_t *tree)
+int Atree_height(const binary_tree_t *tree)
 {
 int lHight_b_tree = 0, rHight_b_tree = 0;
 
