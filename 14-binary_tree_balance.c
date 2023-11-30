@@ -33,7 +33,7 @@ return ((binary_HL > binary_RL) ? binary_HL : binary_RL);
 
 int binary_tree_balance(const binary_tree_t *tree)
 {
-int balance_treeL, balance_treeR;
+int balance_treeL = 0, balance_treeR = 0;
 if (tree)
 {
 
