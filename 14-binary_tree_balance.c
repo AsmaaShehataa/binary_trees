@@ -8,13 +8,16 @@
 
 int binary_tree_balance(const binary_tree_t *tree)
 {
-int tree_count;
+int balance_treeL, balance_treeR;
 if (tree == NULL)
 return (0);
 
-tree_count = tree_height(tree);
-return ((size_t)tree_count);
+balance_treeL = binary_tree_height(tree->left);
+balance_treeR = binary_tree_height(tree->right);
+
+return (balance_treeL - balance_treeR);
 }
+
 
 /**
  * tree_height - count node tree height
@@ -40,3 +43,18 @@ else
 return (right_h + 1);
 }
 
+/**
+ * binary_tree_height - function that measures the balance factor
+ * @tree: a pointer to the root node
+ * Return: size of the tree
+*/
+
+int binary_tree_height(const binary_tree_t *tree)
+{
+int tree_count;
+if (tree == NULL)
+return (0);
+
+tree_count = tree_height(tree);
+return ((size_t)tree_count);
+}
